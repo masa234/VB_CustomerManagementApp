@@ -1,0 +1,663 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+VB_CustomerManagementApp2
+</name>
+</assembly>
+<members>
+<member name="T:VB_CustomerManagementApp2.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:VB_CustomerManagementApp2.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:VB_CustomerManagementApp2.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:VB_CustomerManagementApp2.CommonProc.IsFitInText(System.String,System.Int64)">
+ <summary>
+ 文字数がおさまっているかどうか?
+ </summary>
+ 2023/05/01
+</member>
+<member name="M:VB_CustomerManagementApp2.CommonProc.HideAndOpen(System.Windows.Forms.Form,System.Windows.Forms.Form)">
+ <summary>
+ 画面遷移
+ </summary>
+ 2023/05/01
+</member>
+<member name="M:VB_CustomerManagementApp2.CommonProc.SetCmb(System.Windows.Forms.ComboBox,System.Collections.Generic.List{System.String})">
+ <summary>
+ コンボボックスに設定
+ </summary>
+ 2023/05/02
+</member>
+<member name="M:VB_CustomerManagementApp2.CommonProc.IsTextInCmb(System.Windows.Forms.ComboBox,System.String)">
+ <summary>
+ コンボボックスの選択肢内かどうか?
+ </summary>
+ 2023/05/02
+</member>
+<member name="F:VB_CustomerManagementApp2.Constant.INVALID_LENGTH">
+ <summary>
+ バリデーションメッセージ
+ </summary>
+</member>
+<member name="F:VB_CustomerManagementApp2.Constant.FAILED">
+ <summary>
+ 失敗メッセージ
+ </summary>
+</member>
+<member name="F:VB_CustomerManagementApp2.Constant.SUCCESS">
+ <summary>
+ 成功メッセージ
+ </summary>
+</member>
+<member name="F:VB_CustomerManagementApp2.Constant.ITEM_USERNAME">
+ <summary>
+ アイテム
+ </summary>
+</member>
+<member name="F:VB_CustomerManagementApp2.Constant.WARNING">
+ <summary>
+ メッセージタイトル
+ </summary>
+</member>
+<member name="F:VB_CustomerManagementApp2.Constant.CONNECTION_STRING">
+ <summary>
+ 接続文字列
+ </summary>
+</member>
+<member name="F:VB_CustomerManagementApp2.Constant.USERNAME_MAX_LENGTH">
+ <summary>
+ 最大文字数
+ </summary>
+</member>
+<member name="F:VB_CustomerManagementApp2.Constant.LOCK_COUNT">
+ <summary>
+ その他
+ </summary>
+</member>
+<member name="F:VB_CustomerManagementApp2.Constant.GET_USER_COUNT_SQL">
+ <summary>
+ ユーザ情報SQL
+ </summary>
+</member>
+<member name="F:VB_CustomerManagementApp2.Constant.GET_CUSTOMERS_SQL">
+ <summary>
+ 顧客情報SQL
+ </summary>
+</member>
+<member name="F:VB_CustomerManagementApp2.Constant.GET_COMMUNICATIONHISTORIES_SQL">
+ <summary>
+ コミュニケーション履歴SQL
+ </summary>
+</member>
+<member name="F:VB_CustomerManagementApp2.Constant.GET_CONTRACTS__SQL">
+ <summary>
+ 契約情報SQL
+ </summary>
+</member>
+<member name="F:VB_CustomerManagementApp2.Constant.GET_ORDER_SQL">
+ <summary>
+ 注文情報SQL
+ </summary>
+</member>
+<member name="T:VB_CustomerManagementApp2.EnumValue.UserType">
+ <summary>
+ ユーザ種類
+ </summary>
+</member>
+<member name="T:VB_CustomerManagementApp2.EnumValue.IsLock">
+ <summary>
+ ロックタイプ
+ </summary>
+</member>
+<member name="T:VB_CustomerManagementApp2.EnumValue.Gender">
+ <summary>
+ 性別
+ </summary>
+</member>
+<member name="T:VB_CustomerManagementApp2.EnumValue.IsNotification">
+ <summary>
+ 通知
+ </summary>
+</member>
+<member name="M:VB_CustomerManagementApp2.CommunicationHistory.InsertCommunicationHistory(System.String,System.String)">
+ <summary>
+ コミュニケーション履歴登録
+ </summary>
+ 2023/05/03
+</member>
+<member name="M:VB_CustomerManagementApp2.CommunicationHistory.GetCommunicationHistories">
+ <summary>
+ コミュニケーション履歴一覧取得
+ </summary>
+ 2023/05/03
+</member>
+<member name="M:VB_CustomerManagementApp2.CommunicationHistory.DeleteCommunicationHistory(System.Int64)">
+ <summary>
+ コミュニケーション履歴削除
+ </summary>
+ 2023/05/03
+</member>
+<member name="M:VB_CustomerManagementApp2.Contract.InsertContract(System.String,System.String,System.DateTime,System.DateTime,System.Int32,System.String)">
+ <summary>
+ 契約情報登録
+ </summary>
+ 2023/05/04
+</member>
+<member name="M:VB_CustomerManagementApp2.Contract.GetAllContractList">
+ <summary>
+ 契約情報一覧取得
+ </summary>
+ 2023/05/04
+</member>
+<member name="M:VB_CustomerManagementApp2.Contract.DtToContractList(System.Data.DataTable)">
+ <summary>
+ データテーブルを契約リストに変換
+ </summary>
+ 2023/05/04
+</member>
+<member name="M:VB_CustomerManagementApp2.Contract.DeleteContract(System.Int64)">
+ <summary>
+ 契約情報削除
+ </summary>
+ 2023/04/26
+</member>
+<member name="M:VB_CustomerManagementApp2.Customer.InsertCustomer(System.String,System.Int32,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ 顧客登録
+ </summary>
+ 2023/05/02
+</member>
+<member name="M:VB_CustomerManagementApp2.Customer.GetAllCustomersList">
+ <summary>
+ 顧客一覧取得
+ </summary>
+ 2023/05/03
+</member>
+<member name="M:VB_CustomerManagementApp2.Customer.DtToCustomerList(System.Data.DataTable)">
+ <summary>
+ データテーブルを顧客リストに変換
+ </summary>
+ 2023/05/03
+</member>
+<member name="M:VB_CustomerManagementApp2.Customer.DeleteCustomer(System.Int64)">
+ <summary>
+ 顧客情報削除
+ </summary>
+ 2023/05/03
+</member>
+<member name="M:VB_CustomerManagementApp2.Customer.GetCustomer(System.Int64)">
+ <summary>
+ 顧客情報取得
+ </summary>
+ 2023/05/03
+</member>
+<member name="M:VB_CustomerManagementApp2.Customer.UpdateCustomer(System.String,System.Int32,System.String,System.String,System.String,System.String,System.String,System.Int64)">
+ <summary>
+ 顧客情報更新
+ </summary>
+ 2023/05/03
+</member>
+<member name="M:VB_CustomerManagementApp2.Customer.GetSearchCount(System.String)">
+ <summary>
+ 検索結果(件数)を取得
+ </summary>
+ 2023/05/04
+</member>
+<member name="M:VB_CustomerManagementApp2.Customer.FilterCustomerList(System.String)">
+ <summary>
+ 検索結果を取得
+ </summary>
+ 2023/05/04
+</member>
+<member name="M:VB_CustomerManagementApp2.Customer.OutputCSV(System.Collections.Generic.List{VB_CustomerManagementApp2.CustomerData},System.String)">
+ <summary>
+ CSV出力
+ </summary>
+ 2023/05/05
+</member>
+<member name="M:VB_CustomerManagementApp2.Customer.CustomerListToStringList(System.Collections.Generic.List{VB_CustomerManagementApp2.CustomerData})">
+ <summary>
+ タスクリストを文字列のリストに変換する
+ </summary>
+ 2023/05/05
+</member>
+<member name="M:VB_CustomerManagementApp2.Customer.GetSortedCustomerList">
+ <summary>
+ ソート済み顧客リストを取得
+ </summary>
+ 2023/05/05
+</member>
+<member name="P:VB_CustomerManagementApp2.DB.Con">
+ <summary>
+ コネクション
+ </summary>
+</member>
+<member name="P:VB_CustomerManagementApp2.DB.Tran">
+ <summary>
+ トランザクション
+ </summary>
+</member>
+<member name="M:VB_CustomerManagementApp2.DB.#ctor">
+ <summary>
+ コンストラクタ
+ </summary>
+ 2023/05/01
+</member>
+<member name="M:VB_CustomerManagementApp2.DB.ConOpen(System.String)">
+ <summary>
+ コネクションを開く
+ </summary>
+ 2023/05/01
+</member>
+<member name="M:VB_CustomerManagementApp2.DB.BeginTran">
+ <summary>
+ トランザクション開始
+ </summary>
+ 2023/05/01
+</member>
+<member name="M:VB_CustomerManagementApp2.DB.RollBack">
+ <summary>
+ ロールバック
+ </summary>
+ 2023/05/01
+</member>
+<member name="M:VB_CustomerManagementApp2.DB.Commit">
+ <summary>
+ コミット
+ </summary>
+ 2023/05/01
+</member>
+<member name="M:VB_CustomerManagementApp2.DB.GetCmd(System.String)">
+ <summary>
+ コマンドを取得
+ </summary>
+ 2023/05/01
+</member>
+<member name="M:VB_CustomerManagementApp2.DB.ExecuteNonQuery(System.String,System.Collections.Generic.List{System.Data.SqlClient.SqlParameter})">
+ <summary>
+ INSERT, UPDATE, SELECT用
+ </summary>
+ 2023/05/01
+</member>
+<member name="M:VB_CustomerManagementApp2.DB.ExecuteScalar(System.String,System.Collections.Generic.List{System.Data.SqlClient.SqlParameter})">
+ <summary>
+ SELECT COUNT用
+ </summary>
+ 2023/05/01
+</member>
+<member name="M:VB_CustomerManagementApp2.DB.ExecuteReader(System.String,System.Collections.Generic.List{System.Data.SqlClient.SqlParameter})">
+ <summary>
+ SELECT用
+ </summary>
+ 2023/05/01
+</member>
+<member name="M:VB_CustomerManagementApp2.DB.GetDt(System.String,System.Collections.Generic.List{System.Data.SqlClient.SqlParameter})">
+ <summary>
+ SELECT用
+ </summary>
+ 2023/05/01
+</member>
+<member name="P:VB_CustomerManagementApp2.ContractData.Id">
+ <summary>
+ ID
+ </summary>
+</member>
+<member name="P:VB_CustomerManagementApp2.ContractData.Title">
+ <summary>
+ タイトル
+ </summary>
+</member>
+<member name="P:VB_CustomerManagementApp2.ContractData.Detail">
+ <summary>
+ 詳細
+ </summary>
+</member>
+<member name="P:VB_CustomerManagementApp2.ContractData.ContractStartDate">
+ <summary>
+ 契約開始日
+ </summary>
+</member>
+<member name="P:VB_CustomerManagementApp2.ContractData.ContractEndDate">
+ <summary>
+ 契約終了日
+ </summary>
+</member>
+<member name="P:VB_CustomerManagementApp2.ContractData.ContractMoney">
+ <summary>
+ 契約金
+ </summary>
+</member>
+<member name="P:VB_CustomerManagementApp2.ContractData.Notification">
+ <summary>
+ 通知
+ </summary>
+</member>
+<member name="P:VB_CustomerManagementApp2.CustomerData.Id">
+ <summary>
+ ID
+ </summary>
+</member>
+<member name="P:VB_CustomerManagementApp2.CustomerData.CustomerName">
+ <summary>
+ 顧客氏名
+ </summary>
+</member>
+<member name="P:VB_CustomerManagementApp2.CustomerData.Age">
+ <summary>
+ 年齢
+ </summary>
+</member>
+<member name="P:VB_CustomerManagementApp2.CustomerData.Gender">
+ <summary>
+ 性別
+ </summary>
+</member>
+<member name="P:VB_CustomerManagementApp2.CustomerData.CompanyName">
+ <summary>
+ 会社名
+ </summary>
+</member>
+<member name="P:VB_CustomerManagementApp2.CustomerData.DeptName">
+ <summary>
+ 部署名
+ </summary>
+</member>
+<member name="P:VB_CustomerManagementApp2.CustomerData.MailAddress">
+ <summary>
+ メールアドレス
+ </summary>
+</member>
+<member name="P:VB_CustomerManagementApp2.CustomerData.Remarks">
+ <summary>
+ 備考
+ </summary>
+</member>
+<member name="P:VB_CustomerManagementApp2.OrderData.Id">
+ <summary>
+ ID
+ </summary>
+</member>
+<member name="P:VB_CustomerManagementApp2.OrderData.Title">
+ <summary>
+ タイトル
+ </summary>
+</member>
+<member name="P:VB_CustomerManagementApp2.OrderData.Detail">
+ <summary>
+ 詳細
+ </summary>
+</member>
+<member name="P:VB_CustomerManagementApp2.OrderData.ContractStartDate">
+ <summary>
+ 契約開始日
+ </summary>
+</member>
+<member name="P:VB_CustomerManagementApp2.OrderData.ContractEndDate">
+ <summary>
+ 契約終了日
+ </summary>
+</member>
+<member name="P:VB_CustomerManagementApp2.OrderData.ContractMoney">
+ <summary>
+ 契約金
+ </summary>
+</member>
+<member name="P:VB_CustomerManagementApp2.OrderData.Notification">
+ <summary>
+ 通知
+ </summary>
+</member>
+<member name="M:VB_CustomerManagementApp2.FrmCommunicationHistories.InitForm">
+ <summary>
+ フォーム初期化
+ </summary>
+ 2023/05/03
+</member>
+<member name="M:VB_CustomerManagementApp2.FrmCommunicationHistories.SetDataSource">
+ <summary>
+ データソースの設定
+ </summary>
+ 2023/05/03
+</member>
+<member name="M:VB_CustomerManagementApp2.FrmContracts.InitForm">
+ <summary>
+ フォーム初期化
+ </summary>
+ 2023/05/04
+</member>
+<member name="M:VB_CustomerManagementApp2.FrmContracts.SetDataSource">
+ <summary>
+ データソースの設定
+ </summary>
+ 2023/05/04
+</member>
+<member name="M:VB_CustomerManagementApp2.FrmCustomers.InitForm">
+ <summary>
+ フォーム初期化
+ </summary>
+ 2023/05/03
+</member>
+<member name="M:VB_CustomerManagementApp2.FrmCustomers.SetDataSource">
+ <summary>
+ データソースの設定
+ </summary>
+ 2023/05/03
+</member>
+<member name="M:VB_CustomerManagementApp2.FrmCustomers.SetSearchDataSource(System.String)">
+ <summary>
+ 検索用データソースの設定
+ </summary>
+ 2023/05/04
+</member>
+<member name="M:VB_CustomerManagementApp2.FrmCustomers.SetSortedDataSource">
+ <summary>
+ ソート済みデータソースの設定
+ </summary>
+ 2023/05/05
+</member>
+<member name="M:VB_CustomerManagementApp2.FrmInsertContract.InitForm">
+ <summary>
+ フォーム初期化
+ </summary>
+ 2023/05/04
+</member>
+<member name="M:VB_CustomerManagementApp2.FrmInsertContract.SetCmb">
+ <summary>
+ コンボボックスの設定
+ </summary>
+ 2023/05/04
+</member>
+<member name="M:VB_CustomerManagementApp2.FrmInsertCustomer.InitForm">
+ <summary>
+ フォーム初期化
+ </summary>
+ 2023/05/02
+</member>
+<member name="M:VB_CustomerManagementApp2.FrmInsertCustomer.SetCmb">
+ <summary>
+ コンボボックスの設定
+ </summary>
+ 2023/05/02
+</member>
+<member name="M:VB_CustomerManagementApp2.FrmInsertOrder.InitForm">
+ <summary>
+ フォーム初期化
+ </summary>
+ 2023/05/04
+</member>
+<member name="M:VB_CustomerManagementApp2.FrmInsertOrder.SetCmb">
+ <summary>
+ コンボボックスの設定
+ </summary>
+ 2023/05/04
+</member>
+<member name="M:VB_CustomerManagementApp2.FrmMain.InitForm">
+ <summary>
+ フォーム初期化
+ </summary>
+ 2023/05/02
+</member>
+<member name="M:VB_CustomerManagementApp2.FrmMain.SetBtnVisible">
+ <summary>
+ ボタンの表示非表示を設定
+ </summary>
+ 2023/05/02
+</member>
+<member name="M:VB_CustomerManagementApp2.FrmOrders.InitForm">
+ <summary>
+ フォーム初期化
+ </summary>
+ 2023/05/04
+</member>
+<member name="M:VB_CustomerManagementApp2.FrmOrders.SetDataSource">
+ <summary>
+ データソースの設定
+ </summary>
+ 2023/05/04
+</member>
+<member name="M:VB_CustomerManagementApp2.FrmReleaseLock.InitForm">
+ <summary>
+ フォーム初期化
+ </summary>
+ 2023/05/02
+</member>
+<member name="M:VB_CustomerManagementApp2.FrmReleaseLock.SetDataSource">
+ <summary>
+ データソースの設定
+ </summary>
+ 2023/05/02
+</member>
+<member name="M:VB_CustomerManagementApp2.FrmUpdateCustomer.InitForm">
+ <summary>
+ フォーム初期化
+ </summary>
+ 2023/05/03
+</member>
+<member name="M:VB_CustomerManagementApp2.FrmUpdateCustomer.SetCmb">
+ <summary>
+ コンボボックスの設定
+ </summary>
+ 2023/05/03
+</member>
+<member name="M:VB_CustomerManagementApp2.FrmUpdateCustomer.SetCustomer">
+ <summary>
+ 顧客情報を画面に設定
+ </summary>
+ 2023/05/03
+</member>
+<member name="M:VB_CustomerManagementApp2.Order.InsertOrder(System.String,System.String,System.DateTime,System.DateTime,System.Int32,System.String)">
+ <summary>
+ 注文情報登録
+ </summary>
+ 2023/05/04
+</member>
+<member name="M:VB_CustomerManagementApp2.Order.GetAllOrderList">
+ <summary>
+ 注文情報一覧取得
+ </summary>
+ 2023/05/04
+</member>
+<member name="M:VB_CustomerManagementApp2.Order.DtToOrderList(System.Data.DataTable)">
+ <summary>
+ データテーブルを注文リストに変換
+ </summary>
+ 2023/05/04
+</member>
+<member name="M:VB_CustomerManagementApp2.Order.DeleteOrder(System.Int64)">
+ <summary>
+ 注文情報削除
+ </summary>
+ 2023/05/04
+</member>
+<member name="M:VB_CustomerManagementApp2.OtherProc.GetGenderList">
+ <summary>
+ 性別のリストを取得
+ </summary>
+ 2023/05/02
+</member>
+<member name="M:VB_CustomerManagementApp2.OtherProc.GenderToInt(System.String)">
+ <summary>
+ 性別をInt型に変換する
+ </summary>
+ 2023/05/02
+</member>
+<member name="M:VB_CustomerManagementApp2.OtherProc.GenderToString(System.String)">
+ <summary>
+ 性別をString型に変換する
+ </summary>
+ 2023/05/03
+</member>
+<member name="M:VB_CustomerManagementApp2.OtherProc.GetNotificationList">
+ <summary>
+ 通知のリストを取得
+ </summary>
+ 2023/05/04
+</member>
+<member name="M:VB_CustomerManagementApp2.OtherProc.NotificationToInt(System.String)">
+ <summary>
+ 通知をInt型に変換する
+ </summary>
+ 2023/05/04
+</member>
+<member name="M:VB_CustomerManagementApp2.OtherProc.NotificationToString(System.String)">
+ <summary>
+ 通知をString型に変換する
+ </summary>
+ 2023/05/04
+</member>
+<member name="M:VB_CustomerManagementApp2.User.IsExistsUser(System.String,System.String)">
+ <summary>
+ ユーザが存在するかどうか?
+ </summary>
+ 2023/05/01
+</member>
+<member name="M:VB_CustomerManagementApp2.User.GetUserID(System.String,System.String)">
+ <summary>
+ ユーザID取得
+ </summary>
+ 2023/05/01
+</member>
+<member name="M:VB_CustomerManagementApp2.User.IsExistsUserName(System.String)">
+ <summary>
+ ユーザ名が存在するかどうか?
+ </summary>
+ 2023/05/01
+</member>
+<member name="M:VB_CustomerManagementApp2.User.IsLockedUserName(System.String)">
+ <summary>
+ アカウントがロックされているかどうか?
+ </summary>
+ 2023/05/01
+</member>
+<member name="M:VB_CustomerManagementApp2.User.UpdateLock(System.String,System.Int32)">
+ <summary>
+ ロック状態を更新
+ </summary>
+ 2023/05/02
+</member>
+<member name="M:VB_CustomerManagementApp2.User.IsAdmin(System.Int64)">
+ <summary>
+ 管理者かどうか?
+ </summary>
+ 2023/05/02
+</member>
+<member name="M:VB_CustomerManagementApp2.User.GetAllLockedUsers">
+ <summary>
+ ロックされているユーザ一覧を取得
+ </summary>
+ 2023/05/02
+</member>
+</members>
+</doc>
